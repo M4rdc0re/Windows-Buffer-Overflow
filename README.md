@@ -112,6 +112,16 @@ Restart oscp.exe in Immunity and run the modified exploit.py script again. The E
 
 ### Finding Bad Characters
 
+Create badchars.py
+
+```
+#!/usr/bin/env python3
+
+for x in range(1, 256):
+  print("\\x" + "{:02x}".format(x), end='')
+print()
+```
+
 Generate a bytearray using mona, and exclude the null byte (\x00) by default. Note the location of the bytearray.bin file that is generated (if the working folder was set per the Mona Configuration section of this guide, then the location should be C:\mona\oscp\bytearray.bin).
 ```
 !mona bytearray -cpb "\x00"
