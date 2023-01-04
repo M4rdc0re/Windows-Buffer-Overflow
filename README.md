@@ -25,9 +25,9 @@ Create fuzzer.py
 
 import socket, time, sys
 
-ip = "192.168.1.201" # CHANGE THIS
+ip = "192.168.1.201"
 
-port = 1337 # CHANGE THIS
+port = 1337
 timeout = 5
 prefix = ""
 
@@ -62,8 +62,8 @@ Create exploit.py
 
 import socket
 
-ip = "192.168.1.201" # CHANGE THIS
-port = 1337 # CHANGE THIS
+ip = "192.168.1.201"
+port = 1337
 
 prefix = ""
 offset = 0
