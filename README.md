@@ -1,4 +1,4 @@
-# OSCP Buffer Overflow Windows 7 32 bits
+# Buffer Overflow Windows 7 32 bits
 
 <strong>Run Immunity Debugger as administrator.</strong>
 
