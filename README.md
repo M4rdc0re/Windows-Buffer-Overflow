@@ -181,4 +181,5 @@ Start a netcat listener on your Kali box using the LPORT you specified in the ms
 Restart oscp.exe in Immunity and run the modified exploit.py script again. Your netcat listener should catch a reverse shell!
 
 ## Credits
+* TryHackMe (https://tryhackme.com/room/bufferoverflowprep)
 * Tib3rius (https://github.com/Tib3rius/Pentest-Cheatsheets/blob/master/exploits/buffer-overflows.rst)
