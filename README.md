@@ -179,3 +179,6 @@ With the correct prefix, offset, return address, padding, and payload set, you c
 Start a netcat listener on your Kali box using the LPORT you specified in the msfvenom command (4444 if you didn't change it).
 
 Restart oscp.exe in Immunity and run the modified exploit.py script again. Your netcat listener should catch a reverse shell!
+
+## Credits
+* Tib3rius (https://github.com/Tib3rius/Pentest-Cheatsheets/blob/master/exploits/buffer-overflows.rst)
