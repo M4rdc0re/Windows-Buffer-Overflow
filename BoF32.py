@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# Exploit by Mardcore
 # Windows Buffer Overflow 32 bits
 # offset = 2606
 # badchars = \x00\x0a\x0d
